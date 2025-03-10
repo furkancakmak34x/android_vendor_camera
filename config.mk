@@ -16,9 +16,6 @@ ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),monet picasso vangogh))
 
 VENDOR_PATH := vendor/apps/GoogleCamera
 
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(VENDOR_PATH)/prebuilt/product/app/GoogleCamera/lib,$(TARGET_COPY_OUT_PRODUCT)/app/GoogleCamera/lib)
-
 BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 PRODUCT_PACKAGES += \
